@@ -56,3 +56,14 @@ async def voicevox_synthesis_and_playback(text: str, speaker: int = 3, chunk_siz
             play_audio(voice_data)
             print("Partial audio played.")
 
+def text2zunda(text: str, speaker: int = 3):
+    """Main function to synthesize audio for text and play it."""
+    # Create audio query
+    query_json = create_audio_query(text, speaker)
+    
+    # Synthesize audio
+    voice_data = synthesize_audio(query_json, speaker)
+    
+    # Play audio
+    play_audio(voice_data)
+    print("Audio played.")
