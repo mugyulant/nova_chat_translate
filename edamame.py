@@ -55,3 +55,4 @@ async def voicevox_synthesis_and_playback(text: str, speaker: int = 3, chunk_siz
             )
             play_audio(voice_data)
             print("Partial audio played.")
+
